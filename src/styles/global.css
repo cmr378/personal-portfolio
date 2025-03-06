@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .motion-preset-fade-sm {
+    @apply transition-opacity duration-300;
+  }
+  
+  .motion-preset-slide-right-sm {
+    @apply transition-transform duration-300;
+  }
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,11 +1,176 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<main class="bg-white text-black no-scrollbar overflow-x-hidden font-mono flex justify-center relative z-10">
+  <div class="max-w-5xl w-full p-3 sm:p-8">
+    <div class="flex flex-col justify-center">
+      <div class="flex justify-between mb-4 motion-preset-fade-sm">
+        <h1 class="typewriter text-3xl md:text-4xl lg:text-5xl mr-2 md:mr-0">
+          carlos romero dot dev
+        </h1>
+      </div>
+      <div class="grid grid-cols-5 text-base sm:text-lg lg:px-2">
+        <div class="col-span-5 sm:col-span-3 space-y-2 md:space-y-4">
+          <div class="motion-preset-slide-right-sm flex flex-col">
+            <span class="font-bold">about me</span>
+            <span>
+              cs @ 
+              <a href="https://newbrunswick.rutgers.edu/" class="text-red-500 hover:underline">
+                rutgers
+              </a>
+            </span>
+            <span>
+              i work primarily on backend, with some frontend and machine learning.
+            </span>
+          </div>
+          <div class="motion-preset-slide-right-sm my-2 relative divider h-[2px] w-full bg-gray-600">
+            <div class="absolute inset-0 bg-gradient-radial z-10"></div>
+          </div>
+          <div class="flex flex-col motion-preset-slide-right-sm motion-delay-75">
+            <span class="font-bold">contact me</span>
+            <span>cmr378@gmail.com</span>
+            <span>
+              or find me on 
+              <a href="https://github.com/cmr378" class="text-yellow-500 hover:underline">
+                github
+              </a>
+              and 
+              <a href="https://www.linkedin.com/in/carlosromero97/" class="text-blue-500 hover:underline">
+                linkedin
+              </a>.
+            </span>
+          </div>
+          <div class="motion-preset-slide-right-sm my-2 relative divider h-[2px] w-full bg-gray-600">
+            <div class="absolute inset-0 bg-gradient-radial z-10"></div>
+          </div>
+          <div class="flex flex-col motion-preset-slide-right-sm motion-delay-75">
+            <span class="font-bold">programming</span>
+            <span>
+              i'm best at 
+              <span class="text-blue-500">java</span>, 
+              <span class="text-green-500">python</span>, and 
+              <span class="text-red-500">javascript</span>.
+            </span>
+            <span>
+              i'm learning 
+              <span class="text-pink-500">C</span>.
+            </span>
+          </div>
+          <div class="motion-preset-slide-right-sm my-2 relative divider h-[2px] w-full bg-gray-600">
+            <div class="absolute inset-0 bg-gradient-radial z-10"></div>
+          </div>
+          <div class="flex flex-col motion-preset-slide-right-sm motion-delay-75">
+            <span class="font-bold">skills</span>
+            <span>
+              java frameworks: 
+              <span class="text-green-500">spring</span>, 
+              <span class="text-yellow-500">spring mvc</span>, and 
+              <span class="text-purple-400">hibernate</span>.
+            </span>
+            <span>
+              fullstack frameworks: 
+              <span class="text-red-500">angular</span>, 
+              <span class="text-green-500">react</span>.
+            </span>
+            <span>
+              platforms: 
+              <span class="text-orange-500">aws</span>, 
+              <span class="text-gray-400">vercel</span>, 
+              <span class="text-purple-400">heroku</span>.
+            </span>
+          </div>
+          <div class="motion-preset-slide-right-sm my-2 relative divider h-[2px] w-full bg-gray-600">
+            <div class="absolute inset-0 bg-gradient-radial z-10"></div>
+          </div>
+          <div class="flex flex-col motion-preset-slide-right-sm motion-delay-75">
+            <span class="font-bold">projects</span>
+            <div id="container-content" class="mt-8">
+              <div id="projects" class="motion-preset-fade-sm grid grid-cols-1 gap-4 sm:gap-8 mt-2">
+                <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
+                  <a href="https://github.com/cmr378/pelosi_trade_tracker" target="_blank" rel="noreferrer" class="block">
+                    <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
+                      <div class="absolute inset-0 bg-gradient-radial rounded-[12px] z-0"></div>
+                      <div class="relative m-[2px] bg-blue-50 group hover:bg-blue-200 transition-colors rounded-[10.5px] p-2 lg:p-4 z-10 h-[136px]">
+                        <div class="flex w-full align-middle justify-between relative">
+                          <span class="flex items-center rounded-lg text-2xl transition-all truncate group pointer-events-none">
+                            pelosi-trade-tracker
+                            <div class="opacity-0 transition-opacity group-hover:opacity-100">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 lucide lucide-external-link text-black">
+                                <path d="M15 3h6v6"></path>
+                                <path d="M10 14 21 3"></path>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                              </svg>
+                            </div>
+                          </span>
+                          <svg class="w-8 h-8 inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                          </svg>
+                        </div>
+                        <span class="leading-none text-xs font-normal text-gray-400">Python, Selenium, Robin Stocks API</span>
+                        <p class="line-clamp-4 text-sm md:text-base">Stock tracker for Nancy Pelosi disclosures.</p>
+                      </div>
+                    </div>
+                  </a>                  
+              </div>
+              <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
+                <a href="https://github.com/cmr378/Multithreaded-directory-sorter" target="_blank" rel="noreferrer" class="block">
+                  <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-radial rounded-[12px] z-0"></div>
+                    <div class="relative m-[2px] bg-blue-50 group hover:bg-blue-200 transition-colors rounded-[10.5px] p-2 lg:p-4 z-10 h-[136px]">
+                      <div class="flex w-full align-middle justify-between relative">
+                        <span class="flex items-center rounded-lg text-2xl transition-all truncate group pointer-events-none">
+                          multithreaded-directory-sorter
+                          <div class="opacity-0 transition-opacity group-hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 lucide lucide-external-link text-black">
+                              <path d="M15 3h6v6"></path>
+                              <path d="M10 14 21 3"></path>
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            </svg>
+                          </div>
+                        </span>
+                        <svg class="w-8 h-8 inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
+                          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                        </svg>
+                      </div>
+                      <span class="leading-none text-xs font-normal text-gray-400">C</span>
+                      <p class="line-clamp-4 text-sm md:text-base">Automatically organizes files by type, using multithreading for speed.</p>
+                    </div>
+                  </div>
+                </a>                  
+              </div>
+              <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
+                <a href="https://github.com/cmr378/Calendar-Web-Application" target="_blank" rel="noreferrer" class="block">
+                  <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-radial rounded-[12px] z-0"></div>
+                    <div class="relative m-[2px] bg-blue-50 group hover:bg-blue-200 transition-colors rounded-[10.5px] p-2 lg:p-4 z-10 h-[136px]">
+                      <div class="flex w-full align-middle justify-between relative">
+                        <span class="flex items-center rounded-lg text-2xl transition-all truncate group pointer-events-none">
+                          java calendar application
+                          <div class="opacity-0 transition-opacity group-hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 lucide lucide-external-link text-black">
+                              <path d="M15 3h6v6"></path>
+                              <path d="M10 14 21 3"></path>
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            </svg>
+                          </div>
+                        </span>
+                        <svg class="w-8 h-8 inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
+                          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                        </svg>
+                      </div>
+                      <span class="leading-none text-xs font-normal text-gray-400">Java, Spring, Hibernate, Maven</span>
+                      <p class="line-clamp-4 text-sm md:text-base">Dynamic web app for user event management via interactive calendar.</p>
+                    </div>
+                  </div>
+                </a>                  
+              </div>
+              <span>...and <a href="https://github.com/cmr378" class="hover:underline">more!</a></span>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
