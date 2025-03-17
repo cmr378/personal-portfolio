@@ -2,8 +2,8 @@
 --- <!-- Close empty frontmatter properly in Astro -->
 
 <!-- Parent div uses relative positioning so canvas can be absolutely positioned inside -->
-<div>
-  <canvas></canvas>
+<div class="w-full h-full relative">
+  <canvas id="matrixCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
 </div>
 
 <!-- Load jQuery inline so Astro doesn’t try to SSR it -->
@@ -25,7 +25,7 @@
     }
 
     // Select the canvas and context
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector('#matrixCanvas'); // Ensure it only affects this component
     const ctx = canvas.getContext('2d');
 
     // Dynamically size the canvas to its parent container
@@ -44,7 +44,7 @@
 
     // Dot settings
     const dots = {
-      nb: 150,        // You can lower the number if the area is smaller
+      nb: 500,        // You can lower the number if the area is smaller
       distance: 100,
       d_radius: 50,
       array: []

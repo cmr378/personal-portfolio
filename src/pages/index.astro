@@ -1,4 +1,7 @@
 ---
+import MatrixEffect from "../components/MatrixEffect.astro";
+import SunElement from "../components/SunElement.astro";
+
 /* index.astro */
 ---
 
@@ -12,28 +15,26 @@
     <!-- Full-screen parent div -->
     <div class="h-screen flex">
       <!-- Grid container that takes full height -->
-      <div class="w-full grid grid-cols-[1fr_2fr_1fr] gap-4 h-full">
+      <div class="w-full grid grid-cols-[1fr_1fr_2fr] h-full">
         
         <!-- First Column -->
-        <div class="bg-white p-4 shadow-md flex flex-col justify-center items-center h-full">
-          <h2 class="text-xl font-bold">Column 1</h2>
-          <p>Content for column 1...</p>
+        <div class="bg-white shadow-md flex flex-col justify-center items-center h-full">
+          <SunElement />
         </div>
 
         <!-- Second Column (Updated to prevent third column from getting pushed down) -->
-        <div class="bg-white p-4 shadow-md flex flex-col justify-center items-center h-full">
+        <div class="bg-white shadow-md flex flex-col justify-center items-center h-full">
           <div class="max-w-5xl w-full">
             <div class="justify-center">
               <div class="justify-between mb-4">
-                <h1 class="typewriter text-3xl md:text-4xl lg:text-5xl mr-2 md:mr-0">
-                  carlos romero dot dev
-                </h1>
+                <!-- Note: Leave the inner text empty; it will be filled by the typewriter script -->
+                <h1 class="typewriter text-3xl md:text-4xl lg:text-5xl mr-2 md:mr-0"></h1>
               </div>
               <div class="grid grid-cols-5 text-base sm:text-lg lg:px-2">
-                <div class="col-span-5 sm:col-span-3 space-y-2 md:space-y-4">
+                <div class="col-span-5 space-y-2 md:space-y-4">
                   
                   <!-- About Me Section -->
-                  <div class="motion-preset-slide-right-sm flex flex-col">
+                  <div class="w-full motion-preset-slide-right-sm flex flex-col">
                     <span class="font-bold">about me</span>
                     <span>
                       cs @ 
@@ -120,6 +121,7 @@
                     <div id="container-content" class="mt-8">
                       <div id="projects" class="motion-preset-fade-sm grid grid-cols-1 gap-4 sm:gap-8 mt-2">
 
+                        <!-- Project 1 -->
                         <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
                           <a href="https://github.com/cmr378/pelosi_trade_tracker" target="_blank" rel="noreferrer" class="block">
                             <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
@@ -148,6 +150,7 @@
                           </a>
                         </div>
 
+                        <!-- Project 2 -->
                         <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
                           <a href="https://github.com/cmr378/Multithreaded-directory-sorter" target="_blank" rel="noreferrer" class="block">
                             <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
@@ -175,6 +178,7 @@
                           </a>                  
                         </div>
 
+                        <!-- Project 3 -->
                         <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black" style="--mouse-x: 625px; --mouse-y: -232px;">
                           <a href="https://github.com/cmr378/Calendar-Web-Application" target="_blank" rel="noreferrer" class="block">
                             <div class="relative project inset-0 bg-blue-50 rounded-[12px] h-[140px] w-full border border-black hover:bg-blue-200 transition-colors cursor-pointer">
@@ -204,7 +208,6 @@
 
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -213,12 +216,30 @@
         </div>
 
         <!-- Third Column (Fixed) -->
-        <div class="bg-white p-4 shadow-md flex flex-col justify-center items-center h-full">
-          <h2 class="text-xl font-bold">Column 3</h2>
-          <p>Content for column 3...</p>
+        <div class="bg-white shadow-md flex flex-col justify-center items-center h-full">
+          <MatrixEffect/>
         </div>
-
       </div>
     </div>
+    
+    <!-- Inline Script for Typewriter Effect -->
+    <script client:load is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const el = document.querySelector('.typewriter');
+        const text = "carlos romero dot dev";
+        let index = 0;
+        el.innerHTML = "";
+        
+        function typeWriter() {
+          if (index < text.length) {
+            el.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100); // Adjust speed as needed
+          }
+        }
+        
+        typeWriter();
+      });
+    </script>
   </body>
 </html>
